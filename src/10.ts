@@ -2,9 +2,8 @@ export {};
 const readline = require('readline');
 
 class Main {
-  main(a: number, b: number): number {
-    const arr = [a * 2, b * 3]
-    return arr.reduce((prev, curr) => prev + curr);
+  main(a: number, b: number) {
+
   };
 };
 
@@ -19,11 +18,8 @@ class App {
     });
   };
   run(): void {
-    this.rl.question('Please enter a and b(a, b): ', (answer: string) => {
-      const payload: Array<number> = answer.split(',').map((item) => parseInt(item.trim()));
-      const result: number = this.main.main(payload[0], payload[1]);
-      console.log(result);
-
+    this.rl.question('', (answer: string) => {
+      
       this.rl.close();
     });
   }
