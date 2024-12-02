@@ -3,7 +3,7 @@ const readline = require('readline');
 
 class Main {
   main(a: number, b: number) {
-
+    return
   };
 };
 
