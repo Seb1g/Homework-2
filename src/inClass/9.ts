@@ -2,8 +2,7 @@ export {};
 const readline = require('readline');
 
 class Main {
-  main(array: Array<string>) {
-    let result: Array<string> = []
+  main(array: Array<string>): Array<string> {
     if (array[0].length === array[1].length) {
       return array
     } 
@@ -25,8 +24,8 @@ class App {
   }
   run(): void {
     this.rl.question('Enter your arr(123, 1): ', (input: string) => {
-      const loadout = input.split(',').map((item) => item.trim())
-      const result = this.main.main(loadout);
+      const loadout: Array<string> = input.split(',').map((item) => item.trim())
+      const result: Array<string> = this.main.main(loadout);
       console.log(result.join(' '));
     
       this.rl.close();

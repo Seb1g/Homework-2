@@ -20,8 +20,8 @@ class App {
   }
   run(): void {
     this.rl.question('Enter your arr(1, 2, 3, 4): ', (input: string) => {
-      const loadout = input.split(',').map((item) => parseInt(item.trim()))
-      const result = this.main.main(loadout);
+      const loadout: Array<number> = input.split(',').map((item) => parseInt(item.trim()))
+      const result: number = this.main.main(loadout);
       console.log(result);
     
       this.rl.close();

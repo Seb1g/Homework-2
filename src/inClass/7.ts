@@ -2,8 +2,8 @@ export {};
 const readline = require('readline');
 
 class Main {
-  main(array: Array<number>) {
-    
+  main(array: Array<number>): number {
+    return array[1] - array[0] - (Math.min(array[1] - (array[1] - array[0])))
   };
 }
 
@@ -19,9 +19,9 @@ class App {
     })
   }
   run(): void {
-    this.rl.question('Enter your arr(123, 1): ', (input: string) => {
-      const loadout = input.split(',').map((item) => parseInt(item.trim()))
-      const result = this.main.main(loadout);
+    this.rl.question('Enter your arr(1, 2): ', (input: string) => {
+      const loadout: Array<number> = input.split(',').map((item) => parseInt(item.trim()))
+      const result: number = this.main.main(loadout);
       console.log(result);
     
       this.rl.close();
