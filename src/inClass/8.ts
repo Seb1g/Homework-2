@@ -3,7 +3,7 @@ const readline = require('readline');
 
 class Main {
   main(string: string): number | string {
-    return string.length === 1 ? 'Цифры' : string.length
+    return string.length === 1 ? 'Цифра' : string.length
   };
 }
 
@@ -20,8 +20,8 @@ class App {
   }
   run(): void {
     this.rl.question('Enter your number: ', (input: string) => {
-      const loadout = input
-      const result = this.main.main(loadout);
+      const loadout: string = input
+      const result: string | number = this.main.main(loadout);
       console.log(result);
     
       this.rl.close();

@@ -2,7 +2,7 @@ export {};
 const readline = require('readline');
 
 class Main {
-  main(number: number): number | string | any {
+  main(number: number): number | string {
     return number > 5 || number <= 1 ? 'Number > 5 || number <= 1' : number
   };
 }
@@ -20,8 +20,8 @@ class App {
   }
   run(): void {
     this.rl.question('Enter your number: ', (input: string) => {
-      const loadout = parseInt(input);
-      const result = this.main.main(loadout);
+      const loadout: number = parseInt(input);
+      const result: number | string = this.main.main(loadout);
 
       console.log(result)
       this.rl.close();

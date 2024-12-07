@@ -20,8 +20,8 @@ class App {
   }
   run(): void {
     this.rl.question('Enter your number: ', (input: string) => {
-      const loadout = parseInt(input);
-      const result = this.main.main(loadout);
+      const loadout: number = parseInt(input);
+      const result: number = this.main.main(loadout);
 
       console.log(result)
       this.rl.close();

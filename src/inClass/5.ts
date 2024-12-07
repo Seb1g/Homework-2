@@ -19,8 +19,8 @@ class App {
     })
   }
   run(): void {
-    this.rl.question('Enter your arr(1, 2, 3, 4): ', (input: string) => {
-      const loadout = input
+    this.rl.question('Enter your word: ', (input: string) => {
+      const loadout: string = input
       const result = this.main.main(loadout);
       console.log(result);
     

@@ -2,8 +2,14 @@ export {};
 const readline = require('readline');
 
 class Main {
-  main(a: number, b: number) {
-    return
+  main(y: number): number {
+    for (let a = 10; a < 100; a++) {
+      let b = y - a; // b - последняя цифра трёхзначного числа
+      if (b >= 0 && b < 10) { // b должна быть цифрой (от 0 до 9)
+        return a * 10 + b; // Вернем трёхзначное число
+      }
+    }
+    return -1;
   };
 };
 
@@ -19,7 +25,10 @@ class App {
   };
   run(): void {
     this.rl.question('', (answer: string) => {
-      
+      const loadout: number = parseInt(answer)
+      const result: number = this.main.main(loadout)
+
+      console.log(result);
       this.rl.close();
     });
   }
